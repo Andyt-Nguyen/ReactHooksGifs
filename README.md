@@ -3,7 +3,7 @@ This project was built because I wanted to try the new way of coding React appli
 
 This application was built twice. I have one folder that uses the classical way of writing components and another folder that is built using only functions(hooks). My final conclusion when comparing React Hooks and React Classes is that React Hooks is much better. The code is much more shorter (by at least 20 lines) and so much more cleaner. React hooks are the future!
 
-# You can view the application here https://andyt-nguyen.github.io/ReactHooksGifs/
+## You can view the application here https://andyt-nguyen.github.io/ReactHooksGifs/
 ### Installing
 
 Clone the repo
