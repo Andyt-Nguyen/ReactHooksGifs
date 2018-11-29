@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fav_text_container {
+    display: flex;
+    justify-content: flex-end;
+
+    >.favs_text_on {
+        border-radius: 50%;
+        color: #ff0097;
+        margin: 10px;
+        border: none;
+        background: limegreen;
+        padding: 10px;
+        font-size: 30px;
+        transform: rotate(50deg);
+        transition: 0.2s;
+
+        &:hover {
+            transform: rotate(0);
+            color: white;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    >.favs_text_off {
+        border-radius: 50%;
+        color:white;
+        margin: 10px;
+        border: none;
+        background: limegreen;
+        padding: 10px;
+        font-size: 30px;
+        transition: 0.2s;
+
+        &:hover {
+            transform: rotate(50deg);
+            color:#ff0097;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.favorites_nav_hide {
+    position: absolute;
+    overflow: hidden;
+    left: -350px;
+    height: 100vh;
+    width: 300px;
+    background: rgba(45, 10, 31, 0.8);
+    transition: 0.4s ease-in-out;
+    z-index: 99;
+    > figure {
+        margin: 5px;
+    }
+}
+
+.favorites_nav_show {
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background: rgba(45, 10, 31, 0.8);
+    transition: 0.4s ease-out;
+    > figure {
+        margin: 5px;
+    }
+}
+
+
+
+.header_container {
+    background: hsl(0, 0%, 0%);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+}
+
+
+.search_container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+
+    .search_input {
+        height: 2.1em;
+        font-size: 18px;
+        border: none;
+        width: 70%;
+    }
+
+    button[type="submit"] {
+        padding: 5px;
+        color:white;
+        background: crimson;
+        border: none;
+        font-size: 1.4em;
+        height: 100%;
+    }
+}
+
+.horizantal_container {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    width: 100%;
+ 
+    -webkit-overflow-scrolling: touch;
+    
+    &::-webkit-scrollbar {
+       width: 16px;
+       height: 16px;
+    }
+ 
+    &::-webkit-scrollbar-thumb {
+       background: hsla(203, 61%, 69%, .5);
+       border-radius: 20px; 
+    }
+ 
+    &::-webkit-scrollbar-track {
+       background: hsla(0, 0%, 82%, 0.5);
+    }
+    
+}
+
+.overlay_fav {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    transition: .4s;
+    top: 0;
+    right: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.fav_btn {
+    border: 0;
+    background: 0;
+    margin: 5px 5px 0 0; 
+    position: absolute;
+    right: 0; 
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+    
+    >.fav_icon {
+        color: #ffffff;
+        font-size: 30px;
+        padding: 10px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        transition: all linear .2s;
+    
+        &:hover {
+            transform: rotate(90deg);
+            color: yellow;
+            border-color: yellow;
+        }
+    }
+    
+    >.unfav_icon {
+        color: yellow;
+        font-size: 30px;
+        padding: 10px;
+        border: 2px solid yellow;
+        border-radius: 50%;
+        transition: all linear .2s;
+    
+        &:hover {
+            transform: rotate(90deg);
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+    }
+
+    >.remove_icon {
+        color: yellow;
+        font-size: 30px;
+        padding: 10px;
+        border: 2px solid yellow;
+        border-radius: 50%;
+        transition: all linear .2s;
+    
+        &:hover {
+            transform: rotate(90deg);
+            color: crimson;
+            border-color: crimson;
+        }
+    }
+}
+
+.gifContainer { 
+    position: relative;
+    display: inline-block;
+    margin-right: 13px;
+    transition: opacity 500ms, transform 500ms; 
+    opacity: 1;
+    &:hover {
+        opacity: .9;
+    }
+    .gifBtn {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border:none;
+    
+        &:focus {
+            outline: none;
+        }
+
+        .gifImage {
+            width:100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+    
+    &[data-scroll="out"] {
+       opacity: 0;
+       transform: translateY(200px) scale(.4);
+    }
+    &[data-scroll="in"] { 
+       opacity: 1;
+       transform: translateY(0) scale(1);
+    }
+ }
