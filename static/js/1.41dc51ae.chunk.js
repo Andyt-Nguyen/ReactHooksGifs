@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{21:function(n,t,o){"use strict";o.r(t);var e="HSnoA2enpaw3XUy7E5FJKqg78GrM3TDS";function i(){var n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"hello",t=arguments.length>1?arguments[1]:void 0;""===n&&(n="hello"),fetch("https://api.giphy.com/v1/gifs/search?q=".concat(n,"g&api_key=").concat(e,"&limit=10")).then(function(n){return n.json()}).then(function(n){return t(n)})}o.d(t,"getGifs",function(){return i})}}]);
+//# sourceMappingURL=1.41dc51ae.chunk.js.map
