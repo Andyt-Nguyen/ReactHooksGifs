@@ -20,7 +20,7 @@ yarn start
 
 ## Class Component Code
 
-# GifAppClass.js (Class)
+### GifAppClass.js (Class)
 
 ```javascript
 import React, { Component } from 'react'
@@ -228,7 +228,7 @@ export default class Gif extends Component {
 }
 ```
 
-# Hook Component Code 
+### Hook Component Code 
 
 ### GifAppHooks.js (Functional)
 ```javascript
